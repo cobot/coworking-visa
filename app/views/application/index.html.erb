@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1>Check In A Visa</h1>
+  <% form_tag '/checkins', class: 'form-inline' do  %>
+    <%= text_field_tag :code, placeholder: 'Visa Code' %>
+    <%= submit_tag 'Check in', class: 'btn btn-success' %>
+  <% end %>
+</div>
+<hr>
+<div class="row">
+  <div class="span2"></div>
+  <div class="span5">
+      Hola,<br/>
+      I wrote this little app to show how easy it is to give out coworking visas. All it does is generating visa codes that you can give to your coworkers. Your coworker gives the code to a space he is visiting. The space enters the code to checkin the user and sees the name of the coworker, the name of the space the visa is from. Once used the code is invalid. A code is valid for two weeks. Thats all. What do you think?
+  </div>
+  <div class="span2"></div>
+</div>

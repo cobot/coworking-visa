@@ -1,0 +1,14 @@
+<% form_for @pass, '/passes', class: 'form-inline' do |f| %>
+  <%= f.text_field :name, required: true, placeholder: 'Name of Coworker' %>
+  <%= f.submit 'Generate Visa' %>
+<% end %>
+<h2>Valid Passes</h2>
+<ul class="unstyled">
+  <% current_user.passes.each do |pass| %>
+  <li>
+    for: <%= pass.name %>
+    valid until: <%= I18n.l pass.valid_until.to_date, format: :short %>
+    <%= pass.used_at? ? "Used at: #{I18n.l(pass.used_at.to_date, format: :short)}" : '' %>
+    </li>
+  <% end %>
+</ul>

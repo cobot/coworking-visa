@@ -1,0 +1,5 @@
+<h3> Coworking Visa for <%= @pass.name %></h2>
+<h4>Code: <%= @pass.code %></h4>
+<p>valid until: <%= I18n.l @pass.valid_until.to_date %></p>
+<p>Created: <%= I18n.l Date.today, format: :short %></p>
+<p>Issued By: <%= link_to @pass.user.name, @pass.user.url %></p>

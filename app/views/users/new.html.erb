@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="span3"></div>
+  <div class="span6">
+      <p id="text">Please register your space here</p>
+      <% form_for @user, '/users', class: 'form-horizontal' do |f| %>
+        <fieldset>
+          <div class="control-group">
+            <%= f.text_field :name, required: true, placeholder: 'Name of Space' %>
+          </div>
+          <div class="control-group">
+            <%= f.text_field :url, required: true, placeholder: 'Space Website' %>
+          </div>
+          <div class="control-group">
+            <%= f.text_field :email, required: true, placeholder: 'Your Email' %>
+          </div>
+          <div class="control-group">
+            <%= f.password_field :password, required: true, placeholder: 'New Password' %>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <%= f.submit "Register", class: 'btn btn-success'  %>
+            </div>
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
+  <div class="span3"></div>
+</div>

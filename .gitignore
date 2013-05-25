@@ -1,18 +1,10 @@
-*.gem
-*.rbc
+log/*
+tmp/*
+.DS_Store
+rerun.txt
+database.yml
 .bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+.rvmrc
+capybara-*
+.env
 
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
